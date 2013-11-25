@@ -1,0 +1,50 @@
+.mixin-sample {
+  clear: both;
+
+  div {
+    background-color: #EEE;
+    display: block;
+    float: left;
+    height: 100px;
+    margin: 0 10px 10px 0;
+    width: 100px;
+  }
+}
+
+/*
+@mixin
+
+A mixin to apply border-radius.
+
+Usage:
+@include border-radius(20px);
+@include border-radius(5px 10px 15px 20px);
+
+Styleguide Mixins.BorderRadius.
+*/
+@mixin border-radius($args...) {
+  -webkit-border-radius: $args;
+  -moz-border-radius: $args;
+  -ms-border-radius: $args;
+  border-radius: $args;
+}
+
+/*
+@mixin
+
+A mixin to apply box-shadow.
+
+Usage:
+@include box-shadow(5px 5px 10px #CCC);
+@include box-shadow(inset 0 0 10px #000);
+
+Styleguide Mixins.BoxShadow.
+*/
+@mixin box-shadow($args...) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  -ms-box-shadow: $args;
+  box-shadow: $args;
+}
+
+@import "kss/*/**";
